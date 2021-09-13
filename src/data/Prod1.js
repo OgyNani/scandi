@@ -1,14 +1,12 @@
 import React from 'react';
-import { Row, Button, Col } from "react-bootstrap";
+import { Button, Col } from "react-bootstrap";
 import { connect } from 'react-redux';
 import TopMenu from '../Component/TopMenu';
 import ProductsData from "../ProductsData";
-import { addToBasket, clearBasket, handleRemove } from "../rootReducer";
 
 export class Prod1 extends React.Component {
     constructor(props) {
         super(props);
-        console.log('Prod1',this.props.client, this.client);
         this.state = {
             categoryName: this.props.match?.params.category || 'women',
             id: this.props.match?.params.id || 1
@@ -23,21 +21,21 @@ export class Prod1 extends React.Component {
                 
                     <Col className="xs-2">
                     <div>
-                        <img src={currentProduct.picture} className="imgin1"></img>
+                        <img src={currentProduct.picture} className="imgin1" alt=""></img>
                     </div>
 
                     <div>
-                        <img src={currentProduct.picture} className="imgin2"></img>
+                        <img src={currentProduct.picture} className="imgin2" alt=""></img>
                     </div>
 
                     <div>
-                        <img src={currentProduct.picture} className="imgin3"></img>
+                        <img src={currentProduct.picture} className="imgin3" alt=""></img>
                     </div>
 
                     </Col>
 
                     <Col>
-                        <img src={currentProduct.picture} className="mainimgin"></img>
+                        <img src={currentProduct.picture} className="mainimgin" alt=""></img>
                     </Col>
 
                     <Col>

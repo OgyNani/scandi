@@ -1,74 +1,29 @@
-import { gql } from '@apollo/client';
 import React from 'react';
-import { Dropdown, Button, Col, Row } from "react-bootstrap";
 import { connect } from 'react-redux';
-import { fetchCurrencies } from '../rootReducer';
+import CourencyDropDown from './CourencyDropDown';
 import DropdownCart from "./DropdownCart";
+import CategoryMenu from "./CategoryMenu";
 
 class TopMenu extends React.Component {
-    constructor(props) {
-        super(props);
-        //this.client = useApolloClient();
-        //console.log('TopMenu',this.client);
-        this.state = {
-            category: this.props.category
-        }
-    }
 
-    render() {
-        this.props.fetchCurrencies();
-        // const { currencies } = useLazyQuery(gql`
-            // query GetExchangeRates {
-                // currencies
-            // }
-        // `);
-        // this.props.client.query({
-        //     query: gql`
-        //       query GetCurrencies {
-        //         currencies
-        //       }
-        //     `
-        //   })
-        //   .then(result => console.log(result));
+    render() {  
         return (
             <div className="header">
                 <div>
                     <nav>
-                        <ul className="navigation">
-                            <li className="women line">
-                                <a href="/women" className={this.state.category === 'women' ? 'active' : ''}>WOMEN</a>
-                            </li>
-
-                            <li className="men line">
-                                <a href="/men" className={this.state.category === 'men' ? 'active' : ''}>MEN</a>
-                            </li>
-
-                            <li className="kids line">
-                                <a href="/kids" className={this.state.category === 'kids' ? 'active' : ''}>KIDS</a>
-                            </li>
-                        </ul>
+                        <CategoryMenu category={this.props.category} />
 
                         <div className="logo">
                             <div className="logotr">
-                                <a href="/"><img src="/svg/brico.svg" className="brico"></img></a>
+                                <a href="/"><img src="/svg/brico.svg" className="brico" alt=""></img></a>
                             </div>
                         </div>
 
                         <div className="action">
-                            <Dropdown className="brdrs">
-                                <Dropdown.Toggle id="dropdown-basic" className="drbg">
-                                    <img src="/svg/dollar.svg" className="mony"></img>
-                                </Dropdown.Toggle>
-
-                                <Dropdown.Menu>
-                                    <Dropdown.Item href="#/action-1"> <img src="/svg/USD.svg" className="mony"></img></Dropdown.Item>
-                                    <Dropdown.Item href="#/action-2"> <img src="/svg/EUR.svg" className="mony"></img></Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3"> <img src="/svg/JPY.svg" className="mony"></img></Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
-
+                            <CourencyDropDown />
                             <DropdownCart />
                         </div>
+                       
                     </nav>
                  </div>
             </div>
@@ -81,11 +36,7 @@ const mapStateToProps = state => {
 };
   
 const mapDispatchToProps = dispatch => {
-    return {
-        fetchCurrencies: () => {
-            dispatch(fetchCurrencies())
-        }
-    };
+    return {};
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(TopMenu);

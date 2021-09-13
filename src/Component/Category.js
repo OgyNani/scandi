@@ -7,7 +7,6 @@ import TopMenu from "./TopMenu";
 class Category extends React.Component {
     constructor(props) {
         super(props);
-        console.log('Category',this.props.client, this.client);
         this.state = {
             categoryName: this.props.match?.params.category || 'women'
         }
@@ -18,7 +17,7 @@ class Category extends React.Component {
             <div>
                 <TopMenu category={this.state.categoryName} />
                 <Container className="mt-5">
-                    <ProductList category={this.state.categoryName} />
+                    <ProductList category={this.state.categoryName}  />
                 </Container>
             </div>
         );

@@ -7,12 +7,12 @@ class Product extends React.Component {
         let url = `/men/product/${this.props.product.id}`;
         return (
             <div className="col-lg-4 col-md-6 mb-4 ">
-                <row> 
+                
                     <div className="item1" >
                     <a href={url}>
                         <div className="img1">
-                            <img src={this.props.product.picture} className="hov"></img>
-                            <img src="/svg/greencart.svg" className="greencart hov"></img>
+                            <img src={this.props.product.picture} className="hov" alt=""></img>
+                            <img src="/svg/greencart.svg" className="greencart hov" alt=""></img>
                             
                             
                             <div className="content hov" >
@@ -22,7 +22,7 @@ class Product extends React.Component {
                         </div>
                         </a>
                     </div>
-                </row>
+                
             </div>
         );
     }

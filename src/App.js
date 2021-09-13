@@ -4,8 +4,7 @@ import {
   Route,
 } from "react-router-dom";
 import './App.css';
-import Home from "./Component/Home";
-import TopMenu from "./Component/TopMenu";
+// import Home from "./Component/Home";
 import history from "./history";
 import Prod1 from "./data/Prod1";
 import Category from "./Component/Category";
@@ -14,10 +13,6 @@ import { connect } from "react-redux";
 import React from "react";
 
 class App extends React.Component {
-  constructor(props) {
-      super(props);
-      console.log('App',this.props.client, this.client);
-  }
 
 render() {
   return (

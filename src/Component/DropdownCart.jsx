@@ -11,7 +11,6 @@ class DropdownCart extends React.Component {
         };
     }
 render() {
-  let totalAmount = 0;
   return (
     <>
       {/* {this.props.basket && this.props.basket.map((item, index) => {
@@ -21,7 +20,7 @@ render() {
         <Form >
         <Dropdown className="brdrs">
                 <Dropdown.Toggle id="dropdown-basic" className="drbg">
-                  <img src="/svg/cart.svg" className="cart"></img>
+                  <img src="/svg/cart.svg" className="cart" alt=""></img>
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className="drmenu">
@@ -42,15 +41,15 @@ render() {
                           <p>50.00</p>
                         </div>
                         <img src="/svg/S.svg"
-                          className="sbutcss">
+                          className="sbutcss" alt="">
                         </img>
-                        <img src="/svg/M.svg" className="mbutcss"></img>
+                        <img src="/svg/M.svg" className="mbutcss" alt=""></img>
                                                   
                       </Col>
 
                       <Col>
                         <div>
-                          <img src="/svg/plus-square.svg"></img>
+                          <img src="/svg/plus-square.svg" alt=""></img>
                         </div>
 
                         <p className="countofprodincart" >
@@ -58,13 +57,13 @@ render() {
                         </p>
 
                         <div>
-                          <img src="/svg/minus-square.svg"></img>
+                          <img src="/svg/minus-square.svg" alt=""></img>
                         </div>
                       </Col>
 
                       <Col>
                         <div>
-                          <img src="/svg/Image1.svg" className="picofprodincart"></img> 
+                          <img src="/svg/Image1.svg" className="picofprodincart" alt=""></img> 
                         </div>
                       </Col>
                     </Row>
@@ -86,15 +85,15 @@ render() {
                           <p>50.00</p>
                         </div>
                         <img src="/svg/S.svg"
-                          className="sbutcss">
+                          className="sbutcss" alt="">
                         </img>
-                        <img src="/svg/M.svg" className="mbutcss"></img>
+                        <img src="/svg/M.svg" className="mbutcss" alt=""></img>
                                                   
                       </Col>
 
                       <Col>
                         <div>
-                          <img src="/svg/plus-square.svg"></img>
+                          <img src="/svg/plus-square.svg" alt=""></img>
                         </div>
 
                         <p className="countofprodincart" >
@@ -102,12 +101,12 @@ render() {
                         </p>
 
                         <div>
-                          <img src="/svg/minus-square.svg"></img>
+                          <img src="/svg/minus-square.svg" alt=""></img>
                         </div>
                       </Col>
 
                       <Col>
-                          <img src="/svg/Image1.svg" className="picofprodincart"></img> 
+                          <img src="/svg/Image1.svg" className="picofprodincart" alt=""></img> 
                       </Col>
                     </Row>
                   </Dropdown.Item>
